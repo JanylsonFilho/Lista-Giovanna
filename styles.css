@@ -1,0 +1,207 @@
+/* Definindo variáveis de cor */
+:root {
+    --cor-fundo: #FAF3E0; /* Bege suave */
+    --cor-texto: #3E2723; /* Marrom escuro */
+    --cor-borda: #8D6E63; /* Marrom amadeirado */
+    --cor-container: #FFF8E1; /* Fundo do container */
+    --cor-destaque: #C8A165; /* Tom dourado envelhecido */
+    --cor-botao: #8D6E63; /* Cor dos botões */
+    --cor-botao-hover: #6D4C41; /* Cor do botão ao passar o mouse */
+}
+
+/* Corpo */
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Garante que a altura mínima ocupe toda a tela */
+    justify-content: flex-start;
+}
+
+/* Container principal */
+.container {
+    background: var(--cor-container);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    margin-top: 20px;
+    border: 2px solid var(--cor-borda);
+    margin-bottom: 60px; /* Garante um espaço extra para não colidir com o footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título */
+h1 {
+    color: var(--cor-texto);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Input de tarefa */
+.todo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Campo de input, select e textarea */
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    width: 100%; /* Garante que os inputs se ajustem à largura da div */
+    box-sizing: border-box; /* Garante que o padding não saia da largura do elemento */
+}
+
+/* Botão de adicionar livro */
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--cor-botao);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; /* Garante que o botão ocupe toda a largura */
+    box-sizing: border-box; /* Garante que o padding não saia da largura do botão */
+}
+
+/* Efeito hover nos botões */
+button:hover {
+    background-color: var(--cor-botao-hover);
+}
+
+/* Lista de livros */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    width: 100%; /* Garante que a lista ocupe toda a largura do container */
+    box-sizing: border-box;
+}
+
+/* Itens da lista */
+li {
+    background: #f9f9f9;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid var(--cor-borda);
+    box-sizing: border-box; /* Garante que o padding e a borda não saiam da área do li */
+}
+
+/* Estilo para tarefas completadas */
+li.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Botão de deletar */
+.delete-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--cor-texto);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    font-size: 14px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    .container {
+        width: 90%; /* Ajusta a largura da container para dispositivos menores */
+        margin-top: 10px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .todo-input {
+        gap: 5px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select,
+    textarea,
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    li {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+/* Responsividade para dispositivos móveis (iPhone) */
+@media (max-width: 375px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select,
+    textarea,
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    li {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Livros da Gio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Lista de Livros da Morena mais linda do mundo</h1>
+        <p>Adicione todos os seus livros de romance aqui meu bem</p>
+    </header>
+
+    <div class="container">
+        <h2>Adicionar Novo Livro</h2>
+        <div class="todo-input">
+            <input type="text" id="bookTitle" placeholder="Título do Livro" required>
+            <input type="text" id="bookAuthor" placeholder="Autor do Livro" required>
+            <select id="bookGenre">
+                <option value="" disabled selected>Gênero</option>
+                <option value="Ficção">Ficção</option>
+                <option value="Mistério">Mistério</option>
+                <option value="Fantasia">Fantasia</option>
+                <option value="Romance">Romance</option>
+                <option value="Biografia">Biografia</option>
+            </select>
+            <select id="bookStatus">
+                <option value="" disabled selected>Status de Leitura</option>
+                <option value="Não Iniciado">Não Iniciado</option>
+                <option value="Lendo">Lendo</option>
+                <option value="Finalizado">Finalizado</option>
+            </select>
+            <input type="date" id="startDate">
+            <input type="date" id="endDate">
+            <textarea id="bookNotes" placeholder="Notas/Comentários" rows="3"></textarea>
+            <button onclick="addBook()">Adicionar Livro</button>
+        </div>
+
+        <h3>Livros Adicionados</h3>
+        <ul id="bookList"></ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Lista de Livros - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
